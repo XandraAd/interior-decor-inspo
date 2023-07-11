@@ -1,0 +1,21 @@
+.navbox.scroll {
+    background-color: white;
+  }
+
+  
+.request {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform:uppercase;
+}
+
+.para_request{
+  font-size: 9px;
+}
+
+  .emailInput {
+  border-color: #b5adad;
+  box-shadow: 0 0 0 1px #e7b5b5;
+}
+
+  
