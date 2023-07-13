@@ -119,7 +119,11 @@ const Navigation = () => {
                         </ChakraLink>
                       </Box>
 
-                      <Box>Work</Box>
+                      <Box>
+                        <ChakraLink as={RouterLink} to="/work">
+                          Work
+                        </ChakraLink>
+                      </Box>
                     </Stack>
                   </DrawerBody>
                 </DrawerContent>

@@ -19,14 +19,12 @@ import {
 import PortLiving from "../design-images/Carousel_images/portLivingArea.jpg";
 import Life from "../design-images/Carousel_images/clean&Simple.jpg";
 import WhiteInterior from "../design-images/Carousel_images/modernStyle.jpg";
-import BathTub from "../design-images/480x270/bathtub.jpg";
 
 const Inspiration = () => {
   return (
     <>
       <Grid
         mt={1}
-        h="100vh"
         templateColumns={{ base: "1fr", md: "repeat(4, 1fr)" }}
         gap={4}
       >

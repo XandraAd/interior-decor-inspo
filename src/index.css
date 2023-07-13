@@ -10,12 +10,24 @@
 }
 
 .para_request{
-  font-size: 9px;
+  font-size: 10px;
 }
 
   .emailInput {
   border-color: #b5adad;
   box-shadow: 0 0 0 1px #e7b5b5;
 }
+
+.mail-link {
+  text-decoration:underline;
+  color: blue;
+
+}
+
+.contact-heading {
+  font-size: 12px;
+}
+
+
 
   
