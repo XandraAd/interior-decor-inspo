@@ -5,7 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {
   Container,
   Image,
-  Stack,
+  
   Grid,
   Box,
   Center,
@@ -62,9 +62,21 @@ const Home = () => {
       </Center>
       <Center>
         <Box mt={5}>
-          <Grid templateColumns="repeat(2, 1fr)">
-            <Image boxSize="600px" src={PortLivingArea} alt="bedroom deco" />
-            <Container textAlign="center" lineHeight={2} pr={0} pl={10}>
+          <Flex  flexWrap={{ base: "wrap", lg: "nowrap" }} // Use flexWrap property
+ 
+  flexDir={{ base: "column", lg: "row" }}>
+            <Image boxSize={{ base: "100%", lg: "700px" }} src={PortLivingArea} alt="bedroom deco" />
+            <Container textAlign="center" lineHeight={2} pr={0} pl={10} mt={20}>
+              At our core, we strive to craft distinctive environments that are
+              truly one-of-a-kind. Each space we create is meticulously refined,
+              exuding a sense of cleanliness and timelessness. However, what
+              sets us apart is our adaptability and versatility when it comes to
+              working with different styles. We pride ourselves on seamlessly
+              translating our clients unique visions into reality. Whether it is
+              a contemporary aesthetic, a classic ambiance, or anything in
+              between, we embrace the opportunity to bring our clients wishes to
+              life in the most remarkable and personalized way.
+              <br />
               At our core, we strive to craft distinctive environments that are
               truly one-of-a-kind. Each space we create is meticulously refined,
               exuding a sense of cleanliness and timelessness. However, what
@@ -75,21 +87,23 @@ const Home = () => {
               between, we embrace the opportunity to bring our clients wishes to
               life in the most remarkable and personalized way.
             </Container>
-          </Grid>
+          </Flex>
         </Box>
       </Center>
       <Box mt={5}>
-        <Grid templateColumns="repeat(3, 1fr)" gridGap={4}>
+      <Flex  flexWrap={{ base: "wrap", lg: "nowrap" }} // Use flexWrap property
+ 
+ flexDir={{ base: "column", lg: "row" }}>
           <Box>
-            <Image boxSize="400px" src={Home2} alt="bedroom deco" />
+            <Image boxSize={{ base: "100%",lg: "600px" }} src={Home2} alt="bedroom deco" />
           </Box>
           <Box>
-            <Image boxSize="400px" src={Home2} alt="bedroom deco" />
+            <Image boxSize={{ base: "100%", lg: "600px" }} src={Home2} alt="bedroom deco" />
           </Box>
           <Box>
-            <Image boxSize="400px" src={Home2} alt="bedroom deco" />
+            <Image boxSize={{ base: "100%", lg: "600px" }}src={Home2} alt="bedroom deco" />
           </Box>
-        </Grid>
+        </Flex>
       </Box>
       <Center>
         <Box
@@ -101,24 +115,18 @@ const Home = () => {
         >
           <Carousel showThumbs={false}>
             <div>
-              <img src={Home2} alt="bedroom deco" />
-              <p className="legend">Image 1</p>
+              <Image boxSize={{ base: "100%",lg: "100%" }} src={Home2} alt="bedroom deco"/>
+             <p className="legend">A stylist sitting area for everyone in the family</p>
             </div>
           </Carousel>
-          <style>
-            {`
-            .carousel .carousel-status {
-              display: none;
-            }
-          `}
-          </style>
+          
         </Box>
       </Center>
       <Center>
         <Box
           mt={10}
           width={700}
-          height={500}
+          height={600}
           boxShadow="0 0 10px 2px rgba(0, 0, 0, 0.2)"
           _hover={{
             outline: "1px solid #B7b6b4",

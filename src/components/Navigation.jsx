@@ -19,7 +19,8 @@ import { NavLink as RouterLink } from "react-router-dom";
 import { useDisclosure } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import Logo1 from "../assets/favicon1.png";
-import Logo3 from "../assets/logo3.png";
+import Logo3 from "../assets/Logo3.png";
+
 
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -28,7 +29,7 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.pageYOffset;
+      const scrollTop = window.screenY;
 
       if (scrollTop > 0) {
         setScrolled(true);
@@ -59,7 +60,7 @@ const Navigation = () => {
         <Breadcrumb separator=" ">
           <BreadcrumbItem>
             <a href="/">
-              <img src={Logo1} alt="Home" style={{ width: "5rem" }} />{" "}
+              <img src={Logo1} alt="Home" style={{ width: "3rem" }} />{" "}
             </a>
           </BreadcrumbItem>
 

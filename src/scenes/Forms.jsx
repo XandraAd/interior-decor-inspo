@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import {
   Box,
+  Button,
   Select,
   FormControl,
   Input,
@@ -24,7 +25,7 @@ const Forms = () => {
   const isError = email === "";
   return (
     <>
-      <Box mt={10}>
+      <Box marginTop={10}>
         <h3 className="request"> Send Us Your Contact Request</h3>
         <p className="para_request">
           Should you require any further information,kindly fill out the form
@@ -34,7 +35,7 @@ const Forms = () => {
         </p>
 
         <br />
-        <Box>
+      <Box >
           <FormControl>
             <FormLabel>Your Name</FormLabel>
             <Input type="text" />
@@ -50,7 +51,7 @@ const Forms = () => {
             />
             {!isError ? (
               <FormHelperText>
-                Enter the email you'd like to be contacted on.
+                Enter the email you would like to be contacted on.
               </FormHelperText>
             ) : (
               <FormErrorMessage>Email is required.</FormErrorMessage>
@@ -71,7 +72,15 @@ const Forms = () => {
             placeholder="Your message"
             size="md"
           />
-        </Box>
+            <Button
+            mt={4}
+            colorScheme='purple'
+            type='submit'
+          >
+            Submit
+          </Button>
+            </Box>
+            
       </Box>
     </>
   );

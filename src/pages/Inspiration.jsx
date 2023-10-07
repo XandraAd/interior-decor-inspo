@@ -6,6 +6,7 @@ import {
   Card,
   Image,
   Stack,
+  VStack,
   CardBody,
   Heading,
   Text,
@@ -16,7 +17,8 @@ import {
   Box,
   Center,
 } from "@chakra-ui/react";
-import PortLiving from "../design-images/Carousel_images/portLivingArea.jpg";
+
+import SpaceJoy from "../design-images/Carousel_images/spacejoy1.jpg"
 import Life from "../design-images/Carousel_images/clean&Simple.jpg";
 import WhiteInterior from "../design-images/Carousel_images/modernStyle.jpg";
 
@@ -25,38 +27,57 @@ const Inspiration = () => {
     <>
       <Grid
         mt={1}
-        templateColumns={{ base: "1fr", md: "repeat(4, 1fr)" }}
+        templateColumns={{ base: "1fr", md: "repeat(2, 1fr)",lg:"repeat(4,1fr)" }}
         gap={4}
       >
-        <GridItem rowSpan={2} colSpan={{ base: "auto", md: 1 }}>
+        <GridItem rowSpan={2} colSpan={{ base: "auto", md: 1}}>
           <Card
-            direction={{ base: "column" }}
+            direction={{ base: "column" ,lg: "row"}}
             overflow="hidden"
             variant="outline"
             h="100%"
           >
-            <CardBody>
+            
+              <VStack>
               <Image
-                src={PortLiving}
-                alt="Green double couch with wooden legs"
+                src={SpaceJoy}
+                alt="Orange Sofa with Plants setting"
                 borderRadius="md"
                 objectFit="cover"
-                maxW={{ base: "100%", md: "320" }}
-                height="60%"
-                overflow="hidden"
+                maxW={{ base: "100%", md: "500px" }}
+               h={"100vh"}
+               
               />
-              <Stack mt="6" spacing="3">
+             
+             
+              <CardBody>
                 <Heading size="md">Living room Sofa</Heading>
-                <Text lineHeight={2}>
+                <Text lineHeight={2} py={2}>
                   This sofa is perfect for modern tropical spaces, baroque
                   inspired spaces, earthy toned spaces and for people who love a
                   chic design with a sprinkle of vintage design.
+                  <br />
+                  <br />
+                  This sofa is perfect for modern tropical spaces, baroque
+                  inspired spaces, earthy toned spaces and for people who love a
+                  chic design with a sprinkle of vintage design.
+                  <br />
+                  <br />
+                  This sofa is perfect for modern tropical spaces, baroque
+                  inspired spaces, earthy toned spaces and for people who love a
+                  chic design with a sprinkle of vintage design.
+                  <br />
+                  <br />
+                  This sofa is perfect for modern tropical spaces, baroque
+                  inspired spaces, earthy toned spaces and for people who love a
+                  chic design with a sprinkle of vintage design.
+                  <br />
                   <br />
                   This sofa is perfect for modern tropical spaces, baroque
                   inspired spaces, earthy toned spaces and for people who love a
                   chic design with a sprinkle of vintage design.
                 </Text>
-              </Stack>
+              
             </CardBody>
             <Divider />
             <CardFooter>
@@ -69,6 +90,9 @@ const Inspiration = () => {
                 </Button>
               </ButtonGroup>
             </CardFooter>
+              </VStack>
+         
+           
           </Card>
         </GridItem>
 
