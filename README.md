@@ -27,8 +27,8 @@ Ensure that these dependencies are installed before running the Minimalist Inter
 
 To set up the Minimalist Interior Inspiration website, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/minimalist-interior-inspo.git`
-2. Navigate to the project directory: `cd minimalist-interior-inspo`
+1. Clone the repository: `git clone https://github.com/XandraAd/interior-decor-inspo`
+2. Navigate to the project directory: `cdinterior-decor-inspo`
 3. Install dependencies: `npm install`
 4. Start the application: `npm start`
 
