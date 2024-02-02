@@ -1,11 +1,13 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
+import localStorage from "../LocalStorage"
 import {
   Box,
   Button,
   Select,
   FormControl,
   Input,
+
   FormLabel,
   FormErrorMessage,
   FormHelperText,
@@ -13,19 +15,39 @@ import {
 } from "@chakra-ui/react";
 
 const Forms = () => {
-  const [email, setEmail] = useState("");
-  let [value, setValue] = useState("");
+ const{email}=useState("")
+  const[formData,setFormData]=useState({
+    name:"",
+    email:"",
+    message:"",
+    topic:"",
 
-  const handleEmailChange = (e) => setEmail(e.target.value);
-  const handleInputChange = (e) => {
-    let inputValue = e.target.value;
-    setValue(inputValue);
+  })
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    e.value.reset()
+  
+    // Save form data to localStorage
+    localStorage.setItem("formData", JSON.stringify(formData));
+  
+    // Optionally, reset form data or navigate to a different page
+    setFormData({ name: "", email: "", message: "" });
+  
+    console.log("Form submitted successfully");
+  };
+  
 
   const isError = email === "";
   return (
     <>
-      <Box marginTop={10}>
+      <Box marginTop={10}
+      marginInline={10}
+     >
         <h3 className="request"> Send Us Your Contact Request</h3>
         <p className="para_request">
           Should you require any further information,kindly fill out the form
@@ -35,10 +57,17 @@ const Forms = () => {
         </p>
 
         <br />
-      <Box >
-          <FormControl>
+      <Box onSubmit={handleSubmit}>
+        
+        <FormControl>
             <FormLabel>Your Name</FormLabel>
-            <Input type="text" />
+            <Input 
+             type="text"
+             name="name"
+             value={formData.name}
+             onChange={handleChange}
+             id="name"
+             required/>
             <FormHelperText>Please input full name here</FormHelperText>
           </FormControl>
           <FormControl isInvalid={isError}>
@@ -46,8 +75,9 @@ const Forms = () => {
             <Input
               className="emailInput"
               type="email"
-              value={email}
-              onChange={handleEmailChange}
+              name="email"
+          value={formData.email}
+              onChange={handleChange}
             />
             {!isError ? (
               <FormHelperText>
@@ -67,8 +97,9 @@ const Forms = () => {
           </FormControl>
           <br />
           <Textarea
-            value={value}
-            onChange={handleInputChange}
+          name="message"
+            value={formData.message}
+            onChange={handleChange}
             placeholder="Your message"
             size="md"
           />
@@ -79,6 +110,8 @@ const Forms = () => {
           >
             Submit
           </Button>
+       
+        
             </Box>
             
       </Box>

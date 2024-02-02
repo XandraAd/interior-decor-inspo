@@ -23,6 +23,9 @@ import Life from "../design-images/Carousel_images/clean&Simple.jpg";
 import WhiteInterior from "../design-images/Carousel_images/modernStyle.jpg";
 
 const Inspiration = () => {
+  
+
+
   return (
     <>
       <Grid
@@ -187,11 +190,12 @@ const Inspiration = () => {
 
               <Stack>
                 <CardBody>
-                  <Heading size="md">The perfect latte</Heading>
+                
+                  <Heading size="md">The perfect Space</Heading>
 
                   <Text py="2">
-                    Caffè latte is a coffee beverage of Italian origin made with
-                    espresso and steamed milk.
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla cupiditate saepe aspernatur natus. Totam earum voluptas, inventore quidem eaque dicta explicabo perferendis consectetur ex minus cumque cupiditate fugiat. Omnis, asperiores.
+                  Reiciendis fuga, quo incidunt, beatae impedit facere recusandae, debitis nesciunt obcaecati eum quos aperiam iste perspiciatis. Maxime aperiam numquam, facilis exercitationem consectetur sed asperiores minima perferendis saepe ipsam nobis repudiandae?
                   </Text>
                 </CardBody>
 
@@ -220,11 +224,10 @@ const Inspiration = () => {
 
               <Stack>
                 <CardBody>
-                  <Heading size="md">The perfect latte</Heading>
+                  <Heading size="md">The perfect Space</Heading>
 
                   <Text py="2">
-                    Caffè latte is a coffee beverage of Italian origin made with
-                    espresso and steamed milk.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum modi excepturi cupiditate, assumenda aut quae praesentium sit, rerum, voluptatem facilis ad aperiam alias. Cupiditate ratione voluptates, incidunt veniam totam delectus?
                   </Text>
                 </CardBody>
 

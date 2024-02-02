@@ -62,7 +62,7 @@ const Home = () => {
       </Center>
       <Center>
         <Box mt={5}>
-          <Flex  flexWrap={{ base: "wrap", lg: "nowrap" }} // Use flexWrap property
+          <Flex  flexWrap={{ base: "wrap", lg: "nowrap" }} // Used flexWrap property
  
   flexDir={{ base: "column", lg: "row" }}>
             <Image boxSize={{ base: "100%", lg: "700px" }} src={PortLivingArea} alt="bedroom deco" />
@@ -90,21 +90,22 @@ const Home = () => {
           </Flex>
         </Box>
       </Center>
-      <Box mt={5}>
+      <Box m={5}>
       <Flex  flexWrap={{ base: "wrap", lg: "nowrap" }} // Use flexWrap property
  
  flexDir={{ base: "column", lg: "row" }}>
-          <Box>
+          <Box mb={10}>
             <Image boxSize={{ base: "100%",lg: "600px" }} src={Home2} alt="bedroom deco" />
           </Box>
-          <Box>
+          <Box  mb={10}>
             <Image boxSize={{ base: "100%", lg: "600px" }} src={Home2} alt="bedroom deco" />
           </Box>
-          <Box>
+          <Box mb={10}>
             <Image boxSize={{ base: "100%", lg: "600px" }}src={Home2} alt="bedroom deco" />
           </Box>
         </Flex>
       </Box>
+      
       <Center>
         <Box
           mt={5}

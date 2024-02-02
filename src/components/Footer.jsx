@@ -1,17 +1,27 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import { Box, HStack, VStack, Center, Grid } from "@chakra-ui/react";
+import { Box, HStack, VStack,Container } from "@chakra-ui/react";
+import { FaFacebookF,FaTwitter ,FaInstagramSquare,FaPinterestSquare } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <>
-      <Center
+      <Container
         bg={"gray.200"}
         mt={10}
-        gridtemplateArea={{ base: "1fr", md: "repeat(2, 1fr)", lg: "auto" }}
-        gap={4}
-      >
-        <HStack gap={"5rem"} p={10} m={10}>
+        maxW={{base:"container.sm",md:"container.xl"}}
+        p={4}
+>
+        <HStack  
+        
+
+flexDir={{ base: "column", md: "row" }}
+spacing={{ base: 4, md: 8 }}
+justify={{ base: "center", md: "space-between" }}
+align={{ base: "center", md: "flex-start" }}
+       
+        >
+          
           <Box>
             <VStack>
               <h3 className="request">Explore our site</h3>
@@ -54,10 +64,17 @@ const Footer = () => {
           <Box>
             <VStack>
               <h3 className="request">Social Networks</h3>
+              <HStack className=" social-icons">
+                <FaPinterestSquare />
+              <FaFacebookF/>
+              <FaTwitter/>
+              <FaInstagramSquare/>
+            </HStack>
             </VStack>
+              
           </Box>
         </HStack>
-      </Center>
+      </Container>
     </>
   );
 };

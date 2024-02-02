@@ -1,34 +1,42 @@
-.navbox.scroll {
-    background-color: white;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  
+body {
+  min-width: 100vw;
+}
+
+.navbox.scroll {
+  background-color: white;
+}
+
 .request {
   margin-top: 10px;
   font-size: 14px;
   font-weight: bold;
-  text-transform:uppercase;
+  text-transform: uppercase;
 }
 
-.para_request{
+.para_request {
   font-size: 10px;
 }
 
-  .emailInput {
+.social-icons {
+  margin: 1rem 2rem;
+}
+
+.emailInput {
   border-color: #b5adad;
   box-shadow: 0 0 0 1px #e7b5b5;
 }
 
 .mail-link {
-  text-decoration:underline;
+  text-decoration: underline;
   color: blue;
-
 }
 
 .contact-heading {
   font-size: 12px;
 }
-
-
-
-  

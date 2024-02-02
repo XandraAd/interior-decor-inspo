@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Box, Link as ChakraLink } from "@chakra-ui/react";
 import {
   Button,
+  Flex,
   Drawer,
   DrawerOverlay,
   DrawerContent,
@@ -18,7 +19,7 @@ import {
 import { NavLink as RouterLink } from "react-router-dom";
 import { useDisclosure } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
-import Logo1 from "../assets/favicon1.png";
+
 import Logo3 from "../assets/Logo3.png";
 
 
@@ -52,25 +53,21 @@ const Navigation = () => {
         position="fixed"
         top={0}
         left={0}
-        right={0}
-        zIndex={9999}
+        
+    zIndex={9999}
+        w={{base:"100%"}}
         transition="background-color 0.3s ease-in-out"
         bg={scrolled ? "white" : "transparent"}
       >
-        <Breadcrumb separator=" ">
-          <BreadcrumbItem>
-            <a href="/">
-              <img src={Logo1} alt="Home" style={{ width: "3rem" }} />{" "}
-            </a>
-          </BreadcrumbItem>
-
-          <Spacer />
+       
+        
+          <Breadcrumb separator=" ">
           <BreadcrumbItem>
             <a href="/">
               <img
                 src={Logo3}
                 alt="Home"
-                style={{ width: "10rem", height: "5rem" }}
+                style={{ width: "10rem", height: "5rem",marginLeft: "2rem" }}
               />{" "}
             </a>
           </BreadcrumbItem>
@@ -80,6 +77,7 @@ const Navigation = () => {
           <BreadcrumbItem>
             <BreadcrumbLink>
               <Button
+              marginRight={10}
                 leftIcon={<HamburgerIcon />}
                 colorScheme="teal"
                 onClick={onOpen}
@@ -132,6 +130,8 @@ const Navigation = () => {
             </BreadcrumbLink>
           </BreadcrumbItem>
         </Breadcrumb>
+       
+        
       </Box>
     </>
   );
